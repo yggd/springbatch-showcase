@@ -1,4 +1,8 @@
 .gradle/
 .idea/
+.DS_Store
 build/
 *.iml
+*.swp
+*~
+
