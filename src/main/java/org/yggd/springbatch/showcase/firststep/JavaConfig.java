@@ -1,6 +1,5 @@
 package org.yggd.springbatch.showcase.firststep;
 
-import com.sun.javafx.tk.Toolkit;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
