@@ -14,7 +14,7 @@ public class JavaConfigMain {
      */
     public static void main(String[] args) throws Exception {
         CommandLineJobRunner.main(
-                new String[]{JavaConfig.class.getName(), "firstJob"}
+                new String[]{JavaConfig.class.getName(), "firstJob", "aaa=hoge"}
         );
     }
 }

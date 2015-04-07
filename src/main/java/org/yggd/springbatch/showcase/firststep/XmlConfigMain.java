@@ -13,6 +13,6 @@ public class XmlConfigMain {
      * @param args 引数
      */
     public static void main(String[] args) throws Exception {
-        CommandLineJobRunner.main(new String[]{"org/yggd/springbatch/showcase/firststep/beanDefinition.xml", "firstJob"});
+        CommandLineJobRunner.main(new String[]{"org/yggd/springbatch/showcase/firststep/beanDefinition.xml", "firstJob", "aaa=hoge"});
     }
 }

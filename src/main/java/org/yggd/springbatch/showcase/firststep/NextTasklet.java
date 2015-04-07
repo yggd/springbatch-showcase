@@ -5,7 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.core.step.tasklet.Tasklet;
+import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.repeat.RepeatStatus;
+
+import java.util.Map;
 
 /**
  * 後続タスクレット
@@ -24,7 +27,11 @@ public class NextTasklet implements Tasklet {
      */
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
-        LOGGER.info("I am {}!", "NEXT TASKLET");
+
+        // JobのExecutionContextによるStep間の引き継ぎ
+        ExecutionContext ctx = chunkContext.getStepContext().getStepExecution().getJobExecution().getExecutionContext();
+        LOGGER.info("I am NEXT TASKLET! execution context set by previous step context is {}", ctx.get("message")); // 前Stepからの引き継ぎ
+
         return RepeatStatus.FINISHED; // このステップはこれで終了
     }
 }
