@@ -28,8 +28,11 @@ dependencies {
     testCompile group: 'junit', name: 'junit'
     testCompile group: 'org.springframework.batch', name: 'spring-batch-test'
     compile group: 'org.springframework.batch', name: 'spring-batch-core'
+    compile group: 'org.springframework', name: 'spring-jdbc'
     compile group: 'org.slf4j', name: 'slf4j-api'
     compile group: 'org.slf4j', name: 'jcl-over-slf4j'
     compile group: 'ch.qos.logback', name: 'logback-classic'
     compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.2'
+    compile group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'
+    runtime group: 'org.postgresql', name: 'postgresql', version: '9.3-1100-jdbc41'
 }
