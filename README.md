@@ -2,6 +2,20 @@
 
 柔軟性は高いんだけどいかんせんなかなかとっつきづらいSpring Batchの使い方とか。
 
+## <span style="color: red; ">OUTDATED 2022/10/21</span>
+
+ここで紹介されている `MapJobRepositoryFactoryBean` は Spring Batch 4.3で非推奨となり、
+5.0で削除される予定です。
+
+https://docs.spring.io/spring-batch/docs/current/api/org/springframework/batch/core/repository/support/MapJobRepositoryFactoryBean.html
+
+代替としてはH2などによるインメモリデータベースと、 `JobRepositoryFactoryBean` を使用してください。
+
+詳しい使い方・動かし方については、以下『TERASOLUNA Batch Framework for Java (5.x) Development Guideline』のチュートリアルが参考になると考えます。
+
+https://terasoluna-batch.github.io/guideline/current/ja/single_index.html#Ch09
+
+
 ## first step
 ### package: org.yggd.springbatch.showcase.firststep
 
